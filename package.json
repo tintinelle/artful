@@ -1,7 +1,7 @@
 {
   "name": "artful-genius",
   "version": "0.1.0",
-  "homepage": "https://tintinelle.github.io/artful-genius",
+  "homepage": "https://tintinelle.github.io/artful-genius/",
   "private": false,
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
