@@ -1,0 +1,14 @@
+@import "../../../../style/css/mixins.scss";
+	.link {
+		display: block;
+		margin-block-end: 8px;
+		@include font (300, clamp(12px, 1vw, 14px), 1.4em);
+		color: var(--gray-600);
+
+		&_active {
+			color: var(--general-black);
+			text-decoration: underline;
+			text-underline-offset: 4px;
+			transition: all 0.3s ease-in-out;
+		}
+	}

@@ -1,0 +1,111 @@
+@import "../../style/css/mixins.scss";
+
+.about{
+	margin-block-start: 4.5vw;
+	max-width: var(--max-width-block);
+	margin-inline: auto;
+
+	&__title-group {
+		width: 83.3%;
+		margin: 0 auto 56px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		width: 48.9%;
+		margin: 0;
+		display: flex;
+		align-items: center;
+		gap: 33px;
+		@include title-font ();
+	}
+
+	&__description {
+		width: 25%;
+		text-align: left;
+		@include font (300, clamp(12px, 1.1vw, 16px), 1.5em);
+		color: var(--gray-800);
+
+		@media screen and (max-width: 1080px) {
+			width: 35%;
+		}
+	}
+
+	&__text {
+		width: 83.3%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		@include font (300, clamp(12px, 1.1vw, 16px), 1.5em);
+	}
+
+	&__text-item {
+		&_bold {
+			font-weight: 500;
+		}
+	}
+
+	&__history {
+		width: 83.3%;
+		margin: 64px auto 0;
+		svg {
+			margin-inline-start: 9.3vw;
+			&:nth-of-type(1), &:nth-of-type(5) {
+				margin-inline-start: 8.7vw;
+			}
+
+			@media screen and (min-width: 1900px) {
+				margin-inline-start: 7.5vw;
+				&:nth-of-type(1), &:nth-of-type(5) {
+					margin-inline-start: 7vw;
+				}
+			}
+		}
+	}
+
+	&__subtitle {
+		margin-block: 0 38px;
+		@include font (700, 32px, 38px);
+		color: var(--red-900);
+	}
+}
+
+
+@media screen and (max-width: 700px) {
+	.about {
+		&__title-group {
+			flex-direction: column;
+			gap: 16px;
+		}
+
+		&__title {
+			width: 100%;
+		}
+
+		&__description {
+			width: 100%;
+			text-align: left;
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.about {
+		&__subtitle {
+			text-align: center;
+		}
+		&__history {
+			width: 83.3%;
+			margin: 64px auto 0;
+			svg {
+				margin-inline-start: 50%;
+				&:nth-of-type(1), &:nth-of-type(5) {
+					margin-inline-start: 48%;
+				}
+			}
+		}
+	}
+}

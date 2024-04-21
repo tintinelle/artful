@@ -1,0 +1,146 @@
+@import "../../style/css/mixins.scss";
+
+.stages{
+	width: 98.2%;
+	margin-block-start: 9vw;
+	max-width: var(--max-width-block);
+
+	@media screen and (min-width: 1500px) {
+		margin-inline: auto;
+	}
+
+
+	&__title-group {
+		width: 86.3%;
+		margin: 0 auto 5.6vw;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		width: 48.9%;
+		margin: 0;
+		display: flex;
+		align-items: center;
+		gap: 33px;
+		@include title-font ();
+	}
+
+	&__description {
+		width: 41.6%;
+		text-align: right;
+		@include font (300, clamp(12px, 1.1vw, 16px), 1.5em);
+		color: var(--gray-800);
+	}
+
+	&__steps {
+		width: 85.3%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 8px;
+	}
+
+	&__step {
+		width: 55.2%;
+		display: flex;
+		gap: 3.9vw;
+
+		&_first, &_third {
+			align-self: flex-start;
+			text-align: right;
+		}
+
+		&_second, &_fourth {
+			align-self: flex-end;
+		}
+
+		img {
+			width: 100%;
+			max-width: 126px;
+		}
+
+		@media screen and (min-width: 1441px) {
+			width: 54.2%;
+		}
+
+		@media screen and (max-width: 1370px) {
+			width: 56%;
+		}
+	}
+
+	&__step-title {
+		margin: 0 0 16px;
+		@include font (700, clamp(24px, 2.2vw, 32px), 1.2em);
+		color: var(--red-500);
+	}
+
+	&__step-description {
+		@include font (300, clamp(14px, 1.25vw, 18px), 1.5em);
+	}
+}
+
+@media screen and (max-width: 1160px) {
+	.stages{
+		&__steps {
+			align-items: flex-start;
+			@media screen and (max-width: 700px) {
+				gap: 24px;
+			}
+			svg {
+				margin-inline-start: 48px;
+				@media screen and (max-width: 700px) {
+					display: none;
+				}
+			}
+		}
+
+		&__step {
+			width: 100%;
+			display: flex;
+			gap: 3.9vw;
+
+		&_first, &_third {
+			align-self: flex-start;
+			text-align: right;
+		}
+
+		&_second, &_fourth {
+			align-self: flex-end;
+		}
+
+		img {
+			order: 1;
+			@media screen and (max-width: 700px) {
+				max-width: 80px;
+			}
+		}
+	}
+		&__text {
+			flex-grow: 1;
+			order: 2;
+			text-align: left;
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.stages {
+		&__title-group {
+			flex-direction: column;
+			gap: 16px;
+		}
+
+		&__title {
+			width: 100%;
+		}
+
+		&__description {
+			width: 100%;
+			text-align: left;
+		}
+	}
+}

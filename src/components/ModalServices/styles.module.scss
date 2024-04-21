@@ -1,0 +1,21 @@
+@import "../../style/css/mixins.scss";
+
+.modal{
+	position: fixed;
+	overflow-y: auto;
+	width: 100%;
+	min-height: 60vh;
+	z-index: 2;
+	padding-block: 30px 82px;
+	background-color: var(--gray-50);
+	transform: scale(1);
+	transition: all 0.3s ease-in-out;
+
+	&__wrapper {
+		width: 83.3%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		gap: 2.2vw;
+	}
+}

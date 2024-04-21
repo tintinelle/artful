@@ -1,0 +1,102 @@
+@import "../../../style/css/mixins.scss";
+
+.category{
+	width: 100%;
+	display: flex;
+
+	&__title-group {
+		width: 29%;
+		display: flex;
+	}
+
+	&__title {
+		@include font (500, clamp(18px, 1.7vw, 24px), 1.3em);
+		color: var(--gray-900);
+		
+		&_active {
+			color: var(--red-700);
+			transition: color 0.3s ease-in-out;
+		}
+	}
+
+	&__button {
+		margin: 4px auto auto 7px;
+		align-self: flex-start;
+
+		svg {
+			transition: transform 0.3s;
+			transform: rotate(0deg);
+		}
+
+		&_active {
+			svg {
+			transform: rotate(-90deg);
+			}
+		}
+	}
+
+	&__links {
+		width: 33%;
+	}
+
+	&__link {
+		display: block;
+		margin-block-end: 8px;
+		@include font (300, clamp(12px, 1vw, 14px), 1.4em);
+		color: var(--gray-600);
+
+		&_active {
+			color: var(--general-black);
+			text-decoration: underline;
+			text-underline-offset: 4px;
+			transition: all 0.3s ease-in-out;
+		}
+	}
+
+	&__link-description {
+		width: 38%;
+		padding-inline-start: 24px;
+		box-sizing: border-box;
+		@include font (300, 12px, 16px);
+		color: var(--general-black);
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.category{
+		&__title-group {
+			width: 35%;
+		}
+		&__links {
+			width: 40%;
+		}
+		&__link-description {
+			width: 25%;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.category{
+		flex-wrap: wrap;
+		&__title-group {
+			width: 100%;
+		}
+		&__links {
+			width: 50%;
+			padding: 5px;
+		}
+		&__link-description {
+			width: calc((100% - 20px) / 2);
+			padding: 5px;
+		}
+	}
+}
+
+// @media screen and (max-width: 1000px) {
+// 	.category{
+// 		&__title {}
+// 		&__links {}
+// 		&__link-description {}
+// 	}
+// }

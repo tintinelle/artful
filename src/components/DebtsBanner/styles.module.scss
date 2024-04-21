@@ -1,0 +1,38 @@
+@import "../../style/css/mixins.scss";
+
+.banner{
+	min-height: 466px;
+	margin-block-start: 9vw;
+	display: flex;
+	align-items: center;
+	background-image: url(../../images/debtsBanner/background.webp);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	&__wrapper {
+		width: 50%;
+		margin-inline-start: 8vw;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		color: var(--general-white);
+
+		@media screen and (min-width: 1800px) {
+			margin-inline: auto;
+		}
+
+		@media screen and (max-width: 900px) {
+			width: 85%;
+		}
+	}
+
+	&__title {
+		@include font (700, clamp(22px, 2.7vw, 40px), 1.2em);
+		margin: 0;
+	}
+
+	&__description {
+		@include font (300, clamp(14px, 1.25vw, 18px), 1.5em);
+	}
+}

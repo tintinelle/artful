@@ -1,0 +1,24 @@
+@import "../../style/css/mixins.scss";
+
+.partners{
+	background-color: var(--gray-50);
+
+	&__wrapper {
+		width: 84%;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 32.5% 20% 33.3% 10.7%;
+		align-items: center;
+		gap: 1.16%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__text {
+		text-transform: uppercase;
+		color: var(--gray-900);
+		@include font (700, clamp(12px, 2.7vw, 56px), 1.2em);
+	}
+}

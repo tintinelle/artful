@@ -1,0 +1,33 @@
+@import "../../style/css/mixins.scss";
+
+.facts{
+	min-height: 160px;
+	margin-block-start: 9vw;
+	background-color: var(--gray-50);
+  display: flex;
+  align-items: center;
+	justify-content: space-evenly;
+
+  &__item {
+    @include font (300, clamp(18px, 1.7vw, 24px), 1.3em);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+	.facts{
+		flex-wrap: wrap;
+		gap: 10px;
+
+		&__item {
+			width: calc((100% - 10px) / 2);
+
+			@media screen and (max-width: 450px) {
+				width: 100%;
+			}
+		}
+	}
+}

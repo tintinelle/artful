@@ -1,0 +1,50 @@
+@import "../../../style/css/mixins.scss";
+
+.milestone {
+	display: flex;
+	align-items: center;
+	gap: 2.9vw;
+
+	&__image {
+		width: 22.7%;
+	}
+
+	&__card {
+		width: 74%;
+		@include pink-card ();
+		padding: 16px;
+	}
+
+	&__title {
+		margin-block: 0 12px;
+		@include font (500, clamp(18px, 1.7vw, 24px), 1.3em);
+		color: var(--red-500);
+	}
+
+	&__description {
+		@include font (300, clamp(12px, 1.1vw, 16px), 1.5em);
+	}
+}
+
+
+@media screen and (max-width: 1080px) {
+	.milestone{
+		&__image {
+			width: 20vw;
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.milestone{
+		flex-direction: column;
+
+		&__image {
+			width: 50%;
+		}
+
+		&__card {
+			width: 90%;
+		}
+	}
+}

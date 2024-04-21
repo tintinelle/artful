@@ -1,0 +1,180 @@
+@import "../../style/css/mixins.scss";
+
+.feedbacks {
+	margin-block-start: 4.5vw;
+
+
+	&__title-group {
+		width: 83.3%;
+		margin: 0 auto 56px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		margin: 0;
+		display: flex;
+		align-items: center;
+		gap: 33px;
+		@include title-font ();
+	}
+
+	&__description {
+		text-align: right;
+		@include font (300, clamp(12px, 1.1vw, 16px), 1.5em);
+		color: var(--gray-800);
+	}
+
+	&__content-wrapper {
+		margin-inline: 8.35vw;
+		display: flex;
+		gap: 7.9vw;
+
+		@media screen and (max-width: 1340px) {
+			gap: 4vw;
+		}
+	}
+
+	&__slider-wrapper {
+		width: 67%;
+	}
+
+	&__aside {
+		flex-grow: 1;
+	}
+}
+
+.slider {
+	&__navigation {
+		margin-block-start: 24px;
+		display: flex;
+		align-items: center;
+		gap: 4px;
+	}
+
+	&__button {
+		width: 64px;
+		height: 32px;
+		background-color: transparent;
+		border: 1px solid var(--gray-200);
+		@include font (300, clamp(12px, 1vw, 14px), 1.4em);
+		color: var(--gray-700);
+	}
+
+	&__pagination {
+		width: max-content !important;
+		display: flex;
+	}
+
+	&__pagination-bullet {
+    width: 32px !important;
+    height: 32px !important;
+		display: flex !important;
+		justify-content: center;
+		align-items: center;
+		border-radius: 0 !important;
+    margin: 4px !important;
+		border: 1px solid var(--gray-200) !important;
+		background-color: var(--red-500) !important;
+		color: var(--general-white);
+		@include font (300, clamp(12px, 1vw, 14px), 1.4em);
+		&:active {
+			background-color: var(--red-500) !important;
+		}
+  }
+
+	&__slide {
+		position: relative;
+		box-sizing: border-box;
+		padding-block-end: 24px;
+		border-bottom: 1px solid var(--gray-100);
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: 1.67vw;
+		column-gap: 2.1vw;
+	}
+
+	&__name {
+		width: 100%;
+		margin: 0;
+		@include font (500, clamp(18px, 1.7vw, 24px), 1.3em);
+		color: var(--red-900);
+	}
+
+	&__image {
+		width: 43%;
+		object-fit: cover;
+	}
+
+	&__text-wrapper {
+		flex-grow: 1;
+		width: calc(57% - 30px);
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	&__text-row {
+		display: flex;
+		gap: 8px;
+		@include font (300, clamp(12px, 1.1vw, 16px), 1.5em);
+	}
+
+	&__text-label {
+		width: 37.4%;
+		color: var(--gray-900);
+	}
+
+	&__text-data {
+		width: 62.6%;
+	}
+
+	&__feedback {
+		width: 100%;
+		@include font (300, clamp(12px, 1vw, 14px), 1.4em);
+		color: var(--gray-800);
+		white-space: pre-wrap;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.slider {
+		&__slide {
+			flex-direction: column;
+		}
+		&__image {
+			width: 60%;
+		}
+		&__text-wrapper {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.feedbacks {
+		&__title-group {
+			flex-direction: column;
+			gap: 16px;
+		}
+
+		&__title {
+			width: 100%;
+		}
+
+		&__description {
+			width: 100%;
+			text-align: left;
+		}
+
+		&__content-wrapper {
+			flex-direction: column;
+		}
+
+		&__slider-wrapper {
+			width: 100%;
+		}
+	}
+}
+

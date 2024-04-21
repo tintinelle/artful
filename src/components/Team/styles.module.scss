@@ -1,0 +1,112 @@
+@import "../../style/css/mixins.scss";
+
+.team{
+	margin-block-start: 9vw;
+	max-width: var(--max-width-block);
+	margin-inline: auto;
+
+	&__title-group {
+		width: 86.3%;
+		margin: 0 auto 56px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		margin: 0;
+		display: flex;
+		align-items: center;
+		gap: 33px;
+		@include title-font ();
+	}
+
+	&__description {
+		text-align: right;
+		@include font (300, 16px, 24px);
+		color: var(--gray-800);
+	}
+
+	&__slider-wrapper {
+		width: 86.3%;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	&__slider-button {
+		position: absolute;
+		top: calc((100% - 53px) / 2);
+		z-index: 10;
+		margin: 5px;
+		width: 53px;
+		height: 53px;
+		border: none;
+		border-radius: 26px;
+		background-color: var(--red-900);
+
+		&_next {
+			right: -5px;
+		}
+	
+		&_prev {
+			left: -5px;
+		}
+
+		@media screen and (max-width: 450px) {
+			&_next {
+				right: -30px;
+			}
+			&_prev {
+				left: -30px;
+			}
+		}
+	}
+}
+
+.slider {
+	width: 90.3%;
+
+	&__slide {
+		box-sizing: border-box;
+		padding: 16px 12px;
+		border-radius: 5px;
+		border: 1px solid var(--gray-50);
+		box-shadow: 0px 1px 2px 0px #0000000F;
+		box-shadow: 0px 1px 3px 0px #0000001A;
+		text-align: center;
+	}
+
+	&__subtitle {
+		margin-block: 16px 8px;
+		@include font (500, 18px, 28px);
+		color: var(--red-700);
+	}
+
+	&__position {
+		margin-block-end: 8px;
+		@include font (300, 14px, 20px);
+		color: var(--gray-600);
+	}
+
+	&__description {
+		@include font (300, 14px, 20px);
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.team {
+		&__title-group {
+			flex-direction: column;
+			gap: 16px;
+		}
+
+		&__title {
+			width: 100%;
+		}
+
+		&__description {
+			width: 100%;
+			text-align: left;
+		}
+	}
+}

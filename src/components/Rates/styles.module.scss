@@ -1,0 +1,76 @@
+@import "../../style/css/mixins.scss";
+
+.rates{
+	margin-block-start: 9vw;
+	margin-inline: auto;
+	max-width: var(--max-width-block);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__title-group {
+		width: 83.3%;
+		margin: 0 auto 5.6vw;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__title {
+		width: 49.7%;
+		margin: 0;
+		display: flex;
+		align-items: center;
+		gap: 33px;
+		@include title-font ();
+	}
+
+	&__description {
+		width: 40.6%;
+		text-align: right;
+		@include font (300, clamp(12px, 1.1vw, 16px), 1.5em);
+		color: var(--gray-800);
+	}
+
+	&__cards {
+		width: 83.4%;
+		margin: 0 auto 24px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2.8vw;
+	}
+
+	&__link {
+		width: 22.6%;
+		padding-block: 12px;
+		border-radius: 3px;
+		color: var(--general-white);
+		@include font (400, clamp(12px, 1.25vw, 18px), 1.5em);
+		text-align: center;
+		background-color: transparent;
+		border: 1px solid var(--red-500);
+		color: var(--red-600);
+
+		@media screen and (max-width: 755px) {
+			width: 60%;
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.rates{
+		&__title-group {
+			flex-direction: column;
+			gap: 16px;
+		}
+
+		&__title {
+			width: 100%;
+		}
+
+		&__description {
+			width: 100%;
+			text-align: left;
+		}
+	}
+}

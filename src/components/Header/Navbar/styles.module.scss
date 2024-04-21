@@ -1,0 +1,83 @@
+@import "../../../style/css/mixins.scss";
+
+.navbar {
+  width: 41%;
+
+	&__links {
+		display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+	}
+
+	&__button-list {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		padding: 0;
+		@include font (300, 14px, 1.4em);
+		color: var(--red-400);
+		background-color: transparent;
+
+		svg {
+			transition: all 0.3s ease-in-out;
+			transform: rotate(0deg);
+		}
+
+		svg > path {
+			fill: var(--red-400);
+		}
+
+		&_active {
+			text-decoration: underline;
+			text-underline-offset: 4px;
+			font-weight: 500;
+
+			svg {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+
+	&__link {
+		@include font (400, 14px, 1.4em);
+		color: var(--gray-900);
+
+		&_active {
+			color: var(--red-500);
+			text-decoration: underline;
+			text-underline-offset: 4px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1439px) {
+	.navbar {
+		flex-grow: 2;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.navbar {
+		position: fixed;
+		z-index: 8;
+		top: 100px;
+		left: -26vw;
+		width: 25vw;
+		padding-block: 20px;
+		background-color: var(--gray-50);
+		border-radius: 0 20px 20px 0;
+		transition: left 0.8s;
+
+		&_active {
+			left: 0;
+		}
+
+		&__links {
+			padding-inline: 20px;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+	}
+}

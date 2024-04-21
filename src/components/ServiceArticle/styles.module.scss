@@ -1,0 +1,67 @@
+@import "../../style/css/mixins.scss";
+
+.service {
+	margin-block-start: 4.5vw;
+
+	&__content-wrapper {
+		width: 83.3%;
+		margin-inline: auto;
+		display: flex;
+		gap: 7.9vw;
+		@media screen and (max-width: 1340px) {
+			gap: 4vw;
+		}
+	}
+
+	&__title {
+		width: 93%;
+		margin: 0;
+		@include font (700, clamp(24px, 2.2vw, 32px), 1.2em);
+		color: var(--red-900);
+	}
+
+	&__article {
+		width: 68%;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	&__aside {
+		flex-grow: 1;
+	}
+
+	&__subtitle {
+		margin-block: 0 8px;
+		@include font (500, clamp(18px, 1.7vw, 24px), 1.3em);
+	}
+
+	&__text {
+		@include font (300, clamp(12px, 1.1vw, 16px), 1.5em);
+
+		&_red {
+			color: var(--red-500);
+		}
+	}
+
+	&__keyphrase {
+		@include font (500, clamp(12px, 1.1vw, 16px), 1.5em);
+	}
+
+	&__buttons {
+		display: flex;
+		gap: 8px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.service {
+		&__content-wrapper {
+			flex-direction: column;
+		}
+
+		&__article {
+			width: 100%;
+		}
+	}
+}

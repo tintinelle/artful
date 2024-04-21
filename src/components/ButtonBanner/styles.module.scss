@@ -1,0 +1,39 @@
+@import "../../style/css/mixins.scss";
+
+.banner{
+	min-height: 394px;
+	margin-block-start: 9vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	&__wrapper {
+		width: 62%;
+		border-radius: 5px;
+		border: 1px solid var(--red-50);
+		padding-block: 41.5px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 12px;
+		color: var(--general-white);
+		background: #FFFFFF15;
+		backdrop-filter: blur(12px);
+	}
+
+	&__title {
+		width: 80%;
+		text-align: center;
+		@include font (700, clamp(18px, 2.2vw, 32px), 1.2em);
+	}
+
+	&__description {
+		@include font (300, clamp(12px, 1.25vw, 18px), 1.5em);
+		text-align: center;
+	}
+}
+

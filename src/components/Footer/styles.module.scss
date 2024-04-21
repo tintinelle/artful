@@ -1,0 +1,145 @@
+@import "../../style/css/mixins.scss";
+
+.footer{
+	background-color: var(--gray-50);;
+	margin-block-start: 9vw;
+	padding-block: 58px;
+
+	&__wrapper {
+		position: relative;
+		width: 83.3%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 25.75px;
+	}
+
+	&__logo {
+		width: 28.5%;
+		margin-block-end: 2.15vw;
+	}
+
+	&__contacts-group {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 8px;
+	}
+
+	&__tel {
+		display: block;
+		@include font (700, clamp(24px, 2.2vw, 32px), 1.2em);
+    color: var(--red-500);
+	}
+
+	&__button {
+		padding: 0;
+		@include font (500, clamp(12px, 1vw, 14px), 1.4em);
+    color: var(--red-500);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    background-color: transparent;
+	}
+
+	&__subtitle {
+		@include font (500, clamp(18px, 1.7vw, 24px), 1.3em);
+    color: var(--red-600);
+		text-align: center;
+	}
+
+	&__text {
+		width: 40.5%;
+		@include font (300, clamp(14px, 1.25vw, 18px), 1.5em);
+		color: var(--general-black);
+
+		@media screen and (max-width: 600px) {
+			width: 80%;
+		}
+	}
+
+	&__links {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__info-text {
+		width: 45%;
+		@include font (300, clamp(10px, 0.8vw, 12px), 1.3em);
+		color: var(--gray-600);
+	}
+
+	&__social-media {
+		flex-grow: 1;
+		display: flex;
+		gap: 27px;
+		svg {
+			max-height: 21px;
+		}
+	}
+
+	&__link {
+		width: 28%;
+		@include font (300, clamp(10px, 1vw, 14px), 1.4em);
+		color: var(--gray-300);
+		text-decoration: underline;
+    text-underline-offset: 3px;
+	}
+
+	&__return {
+		position: absolute;
+		right: 0;
+		bottom: 12%;
+		width: 10.5vw;
+		padding: 0;
+		@include font (300, 12px, 16px);
+		background-color: transparent;
+		a {
+			color: var(--red-500);
+			margin-inline-end: 6px;
+			vertical-align: 3px;
+		}
+	}
+}
+
+@media screen and (max-width: 1350px) {
+	.footer {
+		&__logo {
+			width: 80%;
+			max-width: 341px;
+		}
+
+		&__return {
+			width: max-content;
+		}
+
+		&__info-text,	&__link {
+			width: 30%;
+		}
+
+		&__social-media {
+			justify-content: center;
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.footer {
+		&__return {
+			width: max-content;
+		}
+		&__links {
+			flex-direction: column;
+			gap: 10px;
+			text-align: center;
+		}
+
+		&__info-text,	&__link, &__social-media {
+			width: 100%;
+		}
+	}
+}

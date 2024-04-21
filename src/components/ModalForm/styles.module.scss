@@ -1,0 +1,164 @@
+@import "../../style/css/mixins.scss";
+
+.modal{
+	position: fixed;
+	left: calc((100% - 54.6vw) / 2);
+	top: 5%;
+	z-index: 3;
+	width: 54.6vw;
+	min-height: 33.5vw;
+	border-radius: 6px;
+	overflow-y: auto;
+	display: flex;
+	align-items: center;
+	color: var(--general-white);
+	background-color: var(--general-black);
+	background-image: url(../../images/modalForm/background-form.svg);
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: contain;
+	@media screen and (min-width: 1500px) {
+		min-height: auto;
+		padding-block: 60px;
+		top: 5.8%;
+	}
+
+	&__wrapper {
+		position: relative;
+		width: 83%;
+		margin-inline-start: 6.5%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 32px;
+	}
+
+	&__title {
+		width: 100%;
+		@include font (700, clamp(22px, 2.2vw, 32px), 1.2em);
+		text-align: center;
+		@media screen and (min-width: 1500px) {
+			width: 80%;
+		}
+	}
+
+	&__close {
+		position: absolute;
+		right: -31px;
+		background-color: transparent;
+	}
+}
+
+
+.form {
+  width: calc((100% - 32px) / 2);
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+		&__input-wrapper {
+      width: 100%;
+		}
+
+		&__label {
+      width: 100%;
+      margin-inline-start: 8px;
+      @include font (300, clamp(12px, 1vw, 14px), 1.4em);
+			color: var(--gray-600);
+
+			&_error {
+				color: var(--red-400);
+			}
+		}
+
+		&__input {
+      width: 100%;
+			box-sizing: border-box;
+      padding: 10px 16px;
+      border-radius: 1px;
+      border: 1px solid var(--gray-100);
+      color: var(--gray-200);
+			@include font (300, clamp(12px, 1.1vw, 16px), 1.5em);
+			background-color: transparent;
+
+      &::placeholder {
+        color: var(--gray-200);
+        @include font (300, clamp(12px, 1.1vw, 16px), 1.5em);
+      }
+
+			&_error {
+				border: 1px solid var(--red-400);
+			}
+		}
+
+		&__error {
+			margin: 4px 0 0 12px;
+			color: var(--red-400);
+			@include font (300, 12px, 16px);
+		}
+
+		&__additional-info {
+			float: right;
+			@include font (300, 14px, 20px);
+      color: var(--gray-600);
+		}
+
+		&__button {
+			width: 100%;
+      height: 56px;
+			padding-block: 12px;
+			border-radius: 3px;
+			color: var(--general-white);
+			@include font (300, clamp(14px, 1.25vw, 18px), 1.5em);
+			background-color: var(--red-500);
+			cursor: pointer;
+
+			&_disabled {
+				color: var(--gray-50);
+				background-color: var(--gray-200);
+				cursor: auto;
+			}
+		}
+
+		&__button-info {
+			@include font (300, 12px, 16px);
+			color: var(--gray-300);
+
+			a {
+				@include font (300, 12px, 16px);
+				color: var(--gray-300);
+				text-decoration: underline;
+				text-underline-offset: 3px;
+			}
+		}
+
+      &__error-message {
+        // color: rgb(222, 43, 43);
+        // margin-block-end: 30px;
+      }
+}
+
+@media screen and (max-width: 1439px) {
+	.modal {
+		left: calc((100% - 70vw) / 2);
+		width: 70vw;
+		padding-block: 2.3vw;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.modal {
+		left: calc((100% - 85vw) / 2);
+		width: 85vw;
+		padding-block: 4vw;
+
+		@media screen and (max-width: 700px) {
+			width: 100%;
+			left: 0;
+		}
+
+		.form {
+			width: 75%;
+		}
+	}
+}

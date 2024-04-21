@@ -1,0 +1,31 @@
+@import "../../../style/css/mixins.scss";
+
+.modal {
+	position: fixed;
+	z-index: 3;
+	width: 40vw;
+	padding: 20px 10px;
+	border-radius: 10px;
+	max-height: 80vh;
+	left: calc((100% - 40vw) / 2);
+	top: 50px;
+	overflow-y: auto;
+	background-color: var(--gray-100);
+
+	&__wrapper {
+		position: relative;
+		width: 100%;
+	}
+
+	&__image {
+		width: 90%;
+		margin-inline: 5%;
+	}
+
+	&__close {
+		position: absolute;
+		right: -5px;
+		top: 0;
+		background-color: transparent;
+	}
+}

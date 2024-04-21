@@ -1,0 +1,23 @@
+@import "../../style/css/mixins.scss";
+
+.card{
+	@include pink-card();
+	padding-block: 28.5px;
+
+	&__title {
+		margin: 0;
+		@include font (500, clamp(14px, 1.25vw, 18px), 1.5em);
+		color: var(--red-800);
+	}
+
+	&__description {
+		margin-block: 12px 20px;
+		@include font (300, clamp(12px, 1.1vw, 16px), 1.5em);
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.card {
+		padding: 16px;
+	}
+}

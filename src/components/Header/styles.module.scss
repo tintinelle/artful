@@ -1,0 +1,91 @@
+@import "../../style/css/mixins.scss";
+
+.header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--general-white);
+
+	&__button-burger {
+		background-color: transparent;
+		display: none;
+	}
+
+	&__logo {
+    width: 15.7%;
+		img {
+			width: 100%;
+		}
+	}
+
+	&__contacts {
+    width: 14.5%;
+    text-align: right;
+
+    a {
+			@include font (400, clamp(10px, 1.1vw, 16px), 1.5em);
+      color: var(--red-500);
+    }
+	}
+
+  &__button-call {
+		padding: 0;
+		@include font (400, clamp(10px, 1vw, 14px), 1.4em);
+    color: var(--red-500);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+		text-align: right;
+    background-color: transparent;
+  }
+}
+
+
+@media screen and (max-width: 1439px) {
+	.header {
+		width: 100%;
+		gap: 20px;
+
+		&__logo {
+			margin-inline: 20px;
+		}
+
+		&__contacts {
+			width: 9.5%;
+			flex-grow: 1;
+			margin-inline-end: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.header {
+		&__button-burger {
+			display: block;
+			margin-inline-start: 20px;
+		}
+
+		&__logo {
+			flex-grow: 1;
+			margin-inline: 0;
+			img {
+				max-width: 300px;
+			}
+		}
+
+		&__contacts {
+			width: auto;
+			flex-grow: 0;
+			a {
+				display: block;
+			}
+
+			@media screen and (max-width: 600px) {
+				width: 30%;
+			}
+		}
+	}}

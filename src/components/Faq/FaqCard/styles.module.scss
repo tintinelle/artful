@@ -1,0 +1,42 @@
+@import "../../../style/css/mixins.scss";
+
+.faq-card {
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0px 1px 2px 0px #0000000F;
+  box-shadow: 0px 1px 3px 0px #0000001A;
+
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  &__header {
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    gap: 15px;
+  }
+
+  &__title {
+    flex-basis: 100%;
+    @include font (500, clamp(14px, 1.1vw, 16px), 1.5em);
+    color: var(--red-700);
+  }
+
+  &__icon {
+    transition: transform 0.3s;
+
+    &_expanded {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__description {
+    margin-block-start: 8px;
+    max-width: fit-content;
+    @include font (300, clamp(12px, 1.1vw, 16px), 1.5em);
+    color: var(--gray-700);
+  }
+}

@@ -1,0 +1,57 @@
+@import "../../style/css/mixins.scss";
+
+.promo {
+	min-height: 505px;
+	margin-top: 100px;
+	padding-inline-start: 8.3vw;
+	display: flex;
+	align-items: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	@media screen and (min-width: 1550px) {
+		background-position: top;
+	}
+
+	&__info-group {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		color: var(--general-white);
+	}
+
+	&__title {
+		@include font (700, 56px, 67.5px);
+		margin: 0;
+	}
+
+	&__description {
+		@include font (300, clamp(14px, 1.25vw, 18px), 1.5em);
+	}
+
+	&__buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px;
+	}
+}
+
+@media screen and (max-width: 1150px) {
+	.promo {
+	&__title {
+		font-size: clamp(22px, 3.8vw, 50px);
+		line-height: 1.2em;
+	}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.promo {
+		background-position-x: left;
+
+		&__title, &__description {
+			text-align: center;
+		}
+	}
+}

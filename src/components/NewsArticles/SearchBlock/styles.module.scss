@@ -1,0 +1,45 @@
+@import "../../../style/css/mixins.scss";
+
+.search-block {
+	margin-block-end: 2.8vw;
+	display: flex;
+	gap: 8px;
+
+	&__select {
+		flex-grow: 1;
+		padding: 15px 24px;
+		border-radius: 3px;
+		border: 0.5px solid var(--gray-300);
+		@include font (300, clamp(12px, 1vw, 14px), 1.4em);
+		color: var(--gray-200);
+		border-right: 16px solid transparent;
+	}
+
+	&__input {
+		flex-grow: 1;
+		padding: 15px 24px;
+		border-radius: 3px;
+		border: 0.5px solid var(--gray-300);
+		@include font (300, clamp(12px, 1vw, 14px), 1.4em);
+		color: var(--gray-200);
+
+		&::placeholder {
+			@include font (300, clamp(12px, 1vw, 14px), 1.4em);
+			color: var(--gray-200);
+			background-image: url(../../../images/news/search-alt.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		@media screen and (max-width: 1300px) {
+			flex-grow:5;
+			padding-inline: 10px;
+		}
+	}
+
+	@media screen and (max-width: 600px) {
+		flex-direction: column;
+	}
+}
+
+

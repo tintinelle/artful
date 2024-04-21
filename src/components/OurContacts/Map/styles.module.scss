@@ -1,0 +1,19 @@
+@import "../../../style/css/mixins.scss";
+
+.map{
+	width: 83.3%;
+	margin: 0 auto;
+
+	&__label {
+		margin-block: 33px 25px;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		@include font (500, 16px, 24px);
+		color: var(--red-500);
+	}
+
+	&__wrapper {
+		width: 100%;
+	}
+	}
