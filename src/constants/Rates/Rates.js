@@ -4,7 +4,7 @@ const data = [
     title: "Банкротство граждан",
     description:
       "Представление интересов должников и кредиторов на всех стадиях банкротных процедур",
-    background: "./images/rates/background.webp",
+    background: require("../../images/rates/background.webp"),
     hashtags: ["Банкроство", "Решение проблем", "Погашение долга"],
   },
   {
@@ -12,7 +12,7 @@ const data = [
     title: "Банкротство граждан",
     description:
       "Представление интересов должников и кредиторов на всех стадиях банкротных процедур",
-    background: "./images/rates/background.webp",
+    background: require("../../images/rates/background.webp"),
     hashtags: ["Банкроство", "Решение проблем", "Погашение долга"],
   },
   {
@@ -20,7 +20,7 @@ const data = [
     title: "Банкротство граждан",
     description:
       "Представление интересов должников и кредиторов на всех стадиях банкротных процедур",
-    background: "./images/rates/background.webp",
+    background: require("../../images/rates/background.webp"),
     hashtags: ["Банкроство", "Решение проблем", "Погашение долга"],
   },
   {
@@ -28,7 +28,7 @@ const data = [
     title: "Банкротство граждан",
     description:
       "Представление интересов должников и кредиторов на всех стадиях банкротных процедур",
-    background: "./images/rates/background.webp",
+    background: require("../../images/rates/background.webp"),
     hashtags: ["Банкроство", "Решение проблем", "Погашение долга"],
   },
   {
@@ -36,7 +36,7 @@ const data = [
     title: "Банкротство граждан",
     description:
       "Представление интересов должников и кредиторов на всех стадиях банкротных процедур",
-    background: "./images/rates/background.webp",
+    background: require("../../images/rates/background.webp"),
     hashtags: ["Банкроство", "Решение проблем", "Погашение долга"],
   },
   {
@@ -44,7 +44,7 @@ const data = [
     title: "Банкротство граждан",
     description:
       "Представление интересов должников и кредиторов на всех стадиях банкротных процедур",
-    background: "./images/rates/background.webp",
+    background: require("../../images/rates/background.webp"),
     hashtags: ["Банкроство", "Решение проблем", "Погашение долга"],
   },
 ];

@@ -5,7 +5,7 @@ const TeamData = [
     position: "руководитель компании, стаж более 12 лет",
     description:
       "Специализируется в сфере банкротства, трудовых и налоговых спорах",
-    photo: "./images/team/photo.png",
+    photo: require("../../images/team/photo.png"),
   },
   {
     id: "4796ab54-r56a-4374-aa93-4cbfa221ff84",
@@ -13,7 +13,7 @@ const TeamData = [
     position: "руководитель компании, стаж более 12 лет",
     description:
       "Специализируется в сфере банкротства, трудовых и налоговых спорах",
-    photo: "./images/team/photo.png",
+    photo: require("../../images/team/photo.png"),
   },
   {
     id: "4796ab54-a56r-4374-aa93-4cbfa221ff00",
@@ -21,7 +21,7 @@ const TeamData = [
     position: "руководитель компании, стаж более 12 лет",
     description:
       "Специализируется в сфере банкротства, трудовых и налоговых спорах",
-    photo: "./images/team/photo.png",
+    photo: require("../../images/team/photo.png"),
   },
   {
     id: "4796ab54-a56w-4374-aa93-4cbfa621ff81",
@@ -29,7 +29,7 @@ const TeamData = [
     position: "руководитель компании, стаж более 12 лет",
     description:
       "Специализируется в сфере банкротства, трудовых и налоговых спорах",
-    photo: "./images/team/photo.png",
+    photo: require("../../images/team/photo.png"),
   },
   {
     id: "4796ab54-w56a-4396-aa93-4cbfa221ff81",
@@ -37,7 +37,7 @@ const TeamData = [
     position: "руководитель компании, стаж более 12 лет",
     description:
       "Специализируется в сфере банкротства, трудовых и налоговых спорах",
-    photo: "./images/team/photo.png",
+    photo: require("../../images/team/photo.png"),
   },
   {
     id: "4796ab54-a56a-4374-aa34-4cwfa221ff81",
@@ -45,7 +45,7 @@ const TeamData = [
     position: "руководитель компании, стаж более 12 лет",
     description:
       "Специализируется в сфере банкротства, трудовых и налоговых спорах",
-    photo: "./images/team/photo.png",
+    photo: require("../../images/team/photo.png"),
   },
 ];
 
