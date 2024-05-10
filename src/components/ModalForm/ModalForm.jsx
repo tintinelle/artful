@@ -4,7 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import FormSchema from "../../constants/ModalForm/ModalFormSchema";
 
-const ModalForm = ({ handleCloseClick }) => {
+const ModalForm = ({ handleCloseClick, onClick }) => {
   const { register, handleSubmit, formState } = useForm({
     defaultValues: {
       name: "",
@@ -34,6 +34,8 @@ const ModalForm = ({ handleCloseClick }) => {
           className={style["form"]}
           onSubmit={handleSubmit((data) => {
             console.log(data);
+            onClick();
+            handleCloseClick();
           })}
         >
           <div className={style["form__input-wrapper"]}>

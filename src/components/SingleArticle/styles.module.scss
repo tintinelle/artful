@@ -1,0 +1,119 @@
+@import "../../style/css/mixins.scss";
+
+.article {
+	margin-block-start: 4.5vw;
+
+	&__title {
+		width: 83.3%;
+		margin: 0 auto 56px;
+		display: flex;
+		align-items: center;
+		gap: 33px;
+		@include title-font ();
+	}
+
+	&__content-wrapper {
+		margin-inline: 8.35vw;
+		display: flex;
+		gap: 2.5vw;
+	}
+
+	&__central-content-wrapper {
+		width: 73%;
+	}
+
+	&__aside {
+		width: calc(27% - 2.5vw);
+	}
+
+	&__contents {
+		width: 72%;
+		padding: 2vw 2.8vw;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		border-radius: 5px;
+		border: 1px solid var(--gray-50);
+		background-color: var(--gray-0);
+
+		li {
+			margin-inline-start: 12px;
+			color: var(--gray-900);
+			list-style-type: disc;
+		}
+	}
+
+	&__list {
+		margin-block-start: 12px;
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	&__list-item {
+		color: var(--gray-900);
+		@include font (300, clamp(12px, 1.1vw, 16px), 1.5em);
+
+		&_smaller { 
+			color: var(--gray-500);
+			@include font (300, clamp(12px, 1vw, 14px), 1.4em);
+		}
+
+		&:hover {
+			color: var(--red-500);
+		}
+	}
+
+	&__text-wrapper {
+		margin-block-start: 3.9vw;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	&__subtitle {
+		margin-block: 0;
+		scroll-margin-top: 100px;
+		@include font (500, clamp(18px, 1.7vw, 24px), 1.3em);
+
+		&_red {
+			margin-block: 24px 8px;
+			color: var(--red-900);
+		}
+	}
+
+	&__paragraph {
+		scroll-margin-top: 100px;
+		@include font (300, clamp(12px, 1.1vw, 16px), 1.5em);
+
+		&_bold {
+			font-weight: 500;
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.article {
+		&__content-wrapper {
+			flex-direction: column;
+		}
+
+		&__central-content-wrapper {
+			width: 100%;
+		}
+
+		&__contents {
+			width: 90%;
+		}
+
+		&__aside {
+			width: max-content;
+			margin-block-start: 4vw;
+			@media screen and (max-width: 600px) {
+				width: 100%;
+			}
+		}
+	}
+}
+
+

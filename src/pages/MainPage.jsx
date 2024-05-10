@@ -30,6 +30,12 @@ function MainPage() {
     setCloseModal(true);
   };
 
+  const [displayModalSuccess, setDisplayModalSuccess] = useState(false);
+  const [closeModalSuccess, setCloseModalSuccess] = useState(false);
+  const handleCloseModalSuccess = () => {
+    setCloseModalSuccess(true);
+  };
+
   const [isModalFormOpen, setIsModalFormOpen] = useState(false);
   const displayModalForm = () => {
     setIsModalFormOpen(true);
@@ -59,11 +65,16 @@ function MainPage() {
         <ModalServices closeModal={handleServicesButtonHover} />
       )}
       {isModalFormOpen && !closeModal && (
-        <ModalForm handleCloseClick={handleCloseModal} />
+        <ModalForm
+          handleCloseClick={handleCloseModal}
+          onClick={() => setDisplayModalSuccess(true)}
+        />
       )}
 
       <main>
-        {/* {!closeModal && <ModalSuccess handleCloseClick={handleCloseModal} />} */}
+        {displayModalSuccess && !closeModalSuccess && (
+          <ModalSuccess handleCloseClick={handleCloseModalSuccess} />
+        )}
         <Promo
           contentWidth={promoWidth}
           title="Ваши юридические вопросы - наши решения"
@@ -89,7 +100,7 @@ function MainPage() {
         <Rates displayModalForm={displayModalForm} />
         <NumbersFacts />
         <Faq />
-        <Form />
+        <Form onClick={() => setDisplayModalSuccess(true)} />
       </main>
       <Footer displayModalForm={displayModalForm} />
     </>

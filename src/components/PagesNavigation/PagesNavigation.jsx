@@ -1,9 +1,12 @@
 import style from "./styles.module.scss";
 import { Link } from "react-router-dom";
 
-const PagesNavigation = ({ location }) => {
+const PagesNavigation = ({ location, margin }) => {
   return (
-    <section className={style["pages-navigation"]}>
+    <section
+      className={style["pages-navigation"]}
+      style={{ marginBlockStart: `${margin}` }}
+    >
       <div className={style["pages-navigation__content"]}>
         <Link
           className={`${style["pages-navigation__text"]} ${style["pages-navigation__text_link"]}`}

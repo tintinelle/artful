@@ -14,6 +14,7 @@ import Contacts from "./pages/Contacts";
 import News from "./pages/News";
 import Services from "./pages/Services";
 import ServiceSingle from "./pages/ServiceSingle";
+import NewsArticle from "./pages/NewsArticle";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -25,6 +26,7 @@ root.render(
       <Route path="feedbacks" element={<Feedbacks />} />
       <Route path="contacts" element={<Contacts />} />
       <Route path="news" element={<News />} />
+      <Route path="news/article" element={<NewsArticle />} />
       <Route path="services" element={<Services />} />
       <Route path="services/:category" element={<Services />} />
       <Route path="services/service" element={<ServiceSingle />} />

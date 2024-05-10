@@ -23,6 +23,12 @@ function Contacts() {
     setCloseModal(true);
   };
 
+  const [displayModalSuccess, setDisplayModalSuccess] = useState(false);
+  const [closeModalSuccess, setCloseModalSuccess] = useState(false);
+  const handleCloseModalSuccess = () => {
+    setCloseModalSuccess(true);
+  };
+
   const [isModalFormOpen, setIsModalFormOpen] = useState(false);
   const displayModalForm = () => {
     setIsModalFormOpen(true);
@@ -51,11 +57,16 @@ function Contacts() {
         <ModalServices closeModal={handleServicesButtonHover} />
       )}
       {isModalFormOpen && !closeModal && (
-        <ModalForm handleCloseClick={handleCloseModal} />
+        <ModalForm
+          handleCloseClick={handleCloseModal}
+          onClick={() => setDisplayModalSuccess(true)}
+        />
       )}
 
       <main>
-        {/* {!closeModal && <ModalSuccess handleCloseClick={handleCloseModal} />} */}
+        {displayModalSuccess && !closeModalSuccess && (
+          <ModalSuccess handleCloseClick={handleCloseModalSuccess} />
+        )}
         <Promo
           contentWidth={promoWidth}
           title="Связаться с нами можно легко и непринуждённо"
@@ -64,7 +75,7 @@ function Contacts() {
         />
         <PagesNavigation location={"Контакты"} />
         <OurContacts />
-        <Form />
+        <Form onClick={() => setDisplayModalSuccess(true)} />
       </main>
       <Footer displayModalForm={displayModalForm} />
     </>

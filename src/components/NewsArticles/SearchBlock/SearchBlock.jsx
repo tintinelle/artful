@@ -3,7 +3,7 @@ import Button from "../../Button/Button";
 import { useState, useEffect } from "react";
 import useWindowDimensions from "../../../services/useWindowDimensions";
 
-const SearchBlock = () => {
+const SearchBlock = ({ onClick }) => {
   const { width } = useWindowDimensions();
   const [buttonWidth, setButtonWidth] = useState("22%");
   useEffect(() => {
@@ -25,7 +25,12 @@ const SearchBlock = () => {
         placeholder="      Введите ваш запрос"
       />
 
-      <Button buttonClass="button_clear-red" text="Найти" width={buttonWidth} />
+      <Button
+        buttonClass="button_clear-red"
+        text="Найти"
+        width={buttonWidth}
+        handleClick={onClick}
+      />
     </div>
   );
 };

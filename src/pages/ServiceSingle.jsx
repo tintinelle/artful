@@ -23,6 +23,12 @@ function ServiceSingle() {
     setCloseModal(true);
   };
 
+  const [displayModalSuccess, setDisplayModalSuccess] = useState(false);
+  const [closeModalSuccess, setCloseModalSuccess] = useState(false);
+  const handleCloseModalSuccess = () => {
+    setCloseModalSuccess(true);
+  };
+
   const [isModalFormOpen, setIsModalFormOpen] = useState(false);
   const displayModalForm = () => {
     setIsModalFormOpen(true);
@@ -51,11 +57,16 @@ function ServiceSingle() {
         <ModalServices closeModal={handleServicesButtonHover} />
       )}
       {isModalFormOpen && !closeModal && (
-        <ModalForm handleCloseClick={handleCloseModal} />
+        <ModalForm
+          handleCloseClick={handleCloseModal}
+          onClick={() => setDisplayModalSuccess(true)}
+        />
       )}
 
       <main>
-        {/* {!closeModal && <ModalSuccess handleCloseClick={handleCloseModal} />} */}
+        {displayModalSuccess && !closeModalSuccess && (
+          <ModalSuccess handleCloseClick={handleCloseModalSuccess} />
+        )}
         <Promo
           contentWidth={promoWidth}
           title="Семейные и наследственные споры"
@@ -70,7 +81,7 @@ function ServiceSingle() {
           location={"Услуги / Семейные и наследственные споры"}
         />
         <ServiceArticle displayModalForm={displayModalForm} />
-        <Form />
+        <Form onClick={() => setDisplayModalSuccess(true)} />
       </main>
       <Footer displayModalForm={displayModalForm} />
     </>

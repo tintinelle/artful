@@ -1,0 +1,116 @@
+@import "../../../style/css/mixins.scss";
+
+.search-results {
+
+}
+
+
+
+.slider {
+	&__navigation {
+		margin-block-start: 24px;
+		display: flex;
+		align-items: center;
+		gap: 4px;
+	}
+
+	&__button {
+		width: 64px;
+		height: 32px;
+		background-color: transparent;
+		border: 1px solid var(--gray-200);
+		@include font (300, clamp(12px, 1vw, 14px), 1.4em);
+		color: var(--gray-700);
+	}
+
+	&__pagination {
+		width: max-content !important;
+		display: flex;
+	}
+
+	&__pagination-bullet {
+    width: 32px !important;
+    height: 32px !important;
+		display: flex !important;
+		justify-content: center;
+		align-items: center;
+		border-radius: 0 !important;
+    margin: 4px !important;
+		border: 1px solid var(--gray-200) !important;
+		background-color: var(--red-500) !important;
+		color: var(--general-white);
+		@include font (300, clamp(12px, 1vw, 14px), 1.4em);
+		&:active {
+			background-color: var(--red-500) !important;
+		}
+  }
+
+	&__slide {
+		width: 100%;
+		border-radius: 5px;
+		border-bottom: 1px solid var(--gray-100);
+	}
+
+	&__wrapper {
+		width: 92%;
+		margin: 1.1vw auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 0.8vw;
+	}
+
+	&__title {
+		width: 100%;
+		margin: 0;
+		@include font (500, clamp(12px, 1.1vw, 16px), 1.5em);
+		color: var(--gray-700);
+		cursor: pointer;
+
+		&:hover {
+			color: var(--red-500);
+		}
+	}
+
+	&__description {
+		@include font (300, clamp(12px, 1vw, 14px), 1.4em);
+		color: var(--gray-900);
+	}
+
+	&__hashtag {
+		width: max-content;
+		@include font (300, clamp(12px, 1vw, 14px), 1.4em);
+		color: var(--gray-400);
+	}
+
+	&__additional-info {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__text {
+		@include font (300, clamp(10px, 1.1vw, 12px), 1.3em);
+		color: var(--gray-400);
+	}
+
+	&__likes-wrapper {
+		display: flex;
+		gap: 8px;
+		align-items: center;
+	}
+
+	&__button-more {
+		width: max-content;
+		display: flex;
+		@include font (300, clamp(12px, 1vw, 14px), 1.4em);
+		color: var(--gray-900);
+		svg {
+			margin-block-start: -4px;
+		}
+		&:hover {
+			text-decoration: underline;
+			text-underline-offset: 4px;
+		}
+	}
+}

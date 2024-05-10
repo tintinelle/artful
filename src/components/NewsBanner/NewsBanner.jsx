@@ -10,7 +10,7 @@ const NewsBanner = () => {
         {NewsData.map((item) => {
           return (
             <Link
-              to="/news"
+              to="/news/article"
               key={item.id}
               href="#"
               className={style["news__item"]}

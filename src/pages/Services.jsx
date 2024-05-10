@@ -24,6 +24,12 @@ function Services() {
     setCloseModal(true);
   };
 
+  const [displayModalSuccess, setDisplayModalSuccess] = useState(false);
+  const [closeModalSuccess, setCloseModalSuccess] = useState(false);
+  const handleCloseModalSuccess = () => {
+    setCloseModalSuccess(true);
+  };
+
   const [isModalFormOpen, setIsModalFormOpen] = useState(false);
   const displayModalForm = () => {
     setIsModalFormOpen(true);
@@ -52,11 +58,16 @@ function Services() {
         <ModalServices closeModal={handleServicesButtonHover} />
       )}
       {isModalFormOpen && !closeModal && (
-        <ModalForm handleCloseClick={handleCloseModal} />
+        <ModalForm
+          handleCloseClick={handleCloseModal}
+          onClick={() => setDisplayModalSuccess(true)}
+        />
       )}
 
       <main>
-        {/* {!closeModal && <ModalSuccess handleCloseClick={handleCloseModal} />} */}
+        {displayModalSuccess && !closeModalSuccess && (
+          <ModalSuccess handleCloseClick={handleCloseModalSuccess} />
+        )}
         <Promo
           contentWidth={promoWidth}
           title="Мы во многом можем Вам помочь"

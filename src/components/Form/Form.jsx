@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import FormSchema from "../../constants/Form/FormSchema";
 import manImage from "../../images/form/man.webp";
 
-const Form = () => {
+const Form = ({ onClick }) => {
   const { register, handleSubmit, formState, watch } = useForm({
     defaultValues: {
       name: "",
@@ -35,6 +35,7 @@ const Form = () => {
           className={style["form"]}
           onSubmit={handleSubmit((data) => {
             console.log(data);
+            onClick();
           })}
         >
           <div className={style["form__input-wrapper"]}>

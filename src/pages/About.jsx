@@ -25,6 +25,11 @@ function About() {
   const handleCloseModal = () => {
     setCloseModal(true);
   };
+  const [displayModalSuccess, setDisplayModalSuccess] = useState(false);
+  const [closeModalSuccess, setCloseModalSuccess] = useState(false);
+  const handleCloseModalSuccess = () => {
+    setCloseModalSuccess(true);
+  };
 
   const [isModalFormOpen, setIsModalFormOpen] = useState(false);
   const displayModalForm = () => {
@@ -54,11 +59,16 @@ function About() {
         <ModalServices closeModal={handleServicesButtonHover} />
       )}
       {isModalFormOpen && !closeModal && (
-        <ModalForm handleCloseClick={handleCloseModal} />
+        <ModalForm
+          handleCloseClick={handleCloseModal}
+          onClick={() => setDisplayModalSuccess(true)}
+        />
       )}
 
       <main>
-        {/* {!closeModal && <ModalSuccess handleCloseClick={handleCloseModal} />} */}
+        {displayModalSuccess && !closeModalSuccess && (
+          <ModalSuccess handleCloseClick={handleCloseModalSuccess} />
+        )}
         <Promo
           contentWidth={promoWidth}
           title="Несколько слов о нашей компании"
@@ -76,7 +86,7 @@ function About() {
           textWidth="54%"
         />
         <Team />
-        <Form />
+        <Form onClick={() => setDisplayModalSuccess(true)} />
       </main>
       <Footer displayModalForm={displayModalForm} />
     </>

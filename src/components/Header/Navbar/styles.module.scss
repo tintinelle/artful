@@ -81,3 +81,15 @@
 		}
 	}
 }
+
+@media screen and (max-width: 600px) {
+	.navbar {
+		width: 35vw;
+		left: -46vw;
+		min-width: max-content;
+
+		&_active {
+			left: 0;
+		}
+	}
+}

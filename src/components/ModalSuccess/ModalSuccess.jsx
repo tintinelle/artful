@@ -2,6 +2,9 @@ import style from "./styles.module.scss";
 import CloseButton from "../../images/icons/CloseButton";
 
 const ModalSuccess = ({ handleCloseClick }) => {
+  setTimeout(() => {
+    handleCloseClick();
+  }, 4000);
   return (
     <section className={style["modal"]}>
       <div className={style["modal__wrapper"]}>

@@ -27,25 +27,6 @@ const LinkToService = ({ item, handleMouseEnter, handleMouseLeave }) => {
         <QuestionMark color="#948E8E" />
       )}
     </Link>
-    // <a
-    //   className={`${style["link"]} ${activeLink && style["link_active"]}`}
-    //   href="#"
-    //   onMouseEnter={() => {
-    //     handleMouseEnter(item);
-    //     setActiveLink(!activeLink);
-    //   }}
-    //   onMouseLeave={() => {
-    //     handleMouseLeave();
-    //     setActiveLink(!activeLink);
-    //   }}
-    // >
-    //   {item.title}{" "}
-    //   {activeLink ? (
-    //     <QuestionMark color="#2D2D2D" />
-    //   ) : (
-    //     <QuestionMark color="#948E8E" />
-    //   )}
-    // </a>
   );
 };
 

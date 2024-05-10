@@ -1,0 +1,19 @@
+@import "../../../style/css/mixins.scss";
+
+.search-fail {
+	&__title {
+		margin-block: 0 16px; 
+		@include font (500, clamp(18px, 1.7vw, 24px), 1.3em);
+	}
+	&__description {
+		@include font (300, clamp(14px, 1.25vw, 18px), 1.5em);
+		color: var(--gray-700);
+	}
+	&__link {
+		@include font (500, clamp(12px, 1vw, 14px), 1.4em);
+		color: var(--red-500);
+		text-decoration: underline;
+		text-underline-offset: 4px;
+	}
+}
+
