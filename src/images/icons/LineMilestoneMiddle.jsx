@@ -10,8 +10,8 @@ export default function LineMilestoneMiddle() {
       <path
         d="M2 2L2 78"
         stroke="#BB0C0C"
-        stroke-width="4"
-        stroke-linecap="round"
+        strokeWidth="4"
+        strokeLinecap="round"
       />
     </svg>
   );

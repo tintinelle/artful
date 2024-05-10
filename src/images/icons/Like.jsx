@@ -8,12 +8,12 @@ export default function Like() {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M7.5 2.25021C6.22541 0.76482 4.09559 0.305765 2.49862 1.66594C0.901648 3.02611 0.676817 5.30024 1.93093 6.90892C2.97363 8.24643 6.12923 11.0673 7.16346 11.9804C7.27917 12.0825 7.33703 12.1336 7.40451 12.1536C7.46341 12.1712 7.52786 12.1712 7.58676 12.1536C7.65424 12.1336 7.7121 12.0825 7.8278 11.9804C8.86204 11.0673 12.0176 8.24643 13.0603 6.90892C14.3145 5.30024 14.1171 3.0118 12.4926 1.66594C10.8682 0.320073 8.77459 0.76482 7.5 2.25021Z"
         stroke="#ABA6A6"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

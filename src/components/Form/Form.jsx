@@ -43,7 +43,7 @@ const Form = ({ onClick }) => {
               className={`${style["form__label"]} ${
                 errors.name && style["form__label_error"]
               }`}
-              for="formName"
+              htmlFor="formName"
             >
               Ваше имя
             </label>
@@ -63,7 +63,7 @@ const Form = ({ onClick }) => {
               className={`${style["form__label"]} ${
                 errors.mail && style["form__label_error"]
               }`}
-              for="formMail"
+              htmlFor="formMail"
             >
               Введите почту
             </label>
@@ -79,7 +79,7 @@ const Form = ({ onClick }) => {
             <span className={style["form__error"]}>{errors.mail?.message}</span>
           </div>
           <div className={style["form__input-wrapper"]}>
-            <label className={style["form__label"]} for="formMessage">
+            <label className={style["form__label"]} htmlFor="formMessage">
               Ваш вопрос
             </label>
             <span className={style["form__additional-info"]}>
@@ -92,7 +92,7 @@ const Form = ({ onClick }) => {
               id="formMessage"
               className={style["form__input"]}
               placeholder="Расскажите о своей проблеме"
-              maxlength="300"
+              maxLength="300"
             ></textarea>
             <span className={style["form__error"]}>
               {errors.message?.message}
