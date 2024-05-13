@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/artful/static/css/main.0b174820.css",
-    "main.js": "/artful/static/js/main.0686b7c8.js",
+    "main.css": "/artful/static/css/main.7aebe525.css",
+    "main.js": "/artful/static/js/main.90c54c56.js",
     "static/media/photo.png": "/artful/static/media/photo.b3a07a3c0e98dec043b3.png",
     "static/media/photo.webp": "/artful/static/media/photo.7a2f6e178f8d6e8c44b5.webp",
     "static/media/contacts.webp": "/artful/static/media/contacts.a240a516a490d720ba26.webp",
@@ -41,11 +41,11 @@
     "static/media/background-form.svg": "/artful/static/media/background-form.1c832f08469ec0588aa8.svg",
     "index.html": "/artful/index.html",
     "static/media/search-alt.svg": "/artful/static/media/search-alt.ce358afdab6fcd2df75f.svg",
-    "main.0b174820.css.map": "/artful/static/css/main.0b174820.css.map",
-    "main.0686b7c8.js.map": "/artful/static/js/main.0686b7c8.js.map"
+    "main.7aebe525.css.map": "/artful/static/css/main.7aebe525.css.map",
+    "main.90c54c56.js.map": "/artful/static/js/main.90c54c56.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b174820.css",
-    "static/js/main.0686b7c8.js"
+    "static/css/main.7aebe525.css",
+    "static/js/main.90c54c56.js"
   ]
 }
